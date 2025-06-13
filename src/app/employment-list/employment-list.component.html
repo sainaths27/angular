@@ -7,7 +7,7 @@
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>Project IDs</th>
+      
           <th>Role ID</th>
           <th>Action</th>
         </tr>
@@ -16,7 +16,7 @@
         <tr *ngFor="let emp of employee">
           <td>{{ emp.id }}</td>
           <td>{{ emp.name }}</td>
-          <td>{{ emp.projectid?.join(', ') }}</td>
+        
           <td>{{ emp.roleid }}</td>
           <td>
             <button class="btn btn-danger btn-sm" (click)="delete(emp.id!)">
