@@ -7,7 +7,7 @@ import { employee } from './app.module';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private baseUrl = 'http://localhost:8080//api/employees';
+  private baseUrl = 'http://localhost:8080/employees';
 
   constructor(private http: HttpClient) {}
 
@@ -54,4 +54,5 @@ export class EmployeeService {
   findByProject(projectId: number): Observable<employee[]> {
     return this.http.get<employee[]>(`${this.baseUrl}/project/${projectId}`);
   }
+  
 }

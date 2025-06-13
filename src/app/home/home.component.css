@@ -1,0 +1,27 @@
+.home-container {
+  height: 100vh;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  padding: 40px;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}

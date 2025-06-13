@@ -1,0 +1,14 @@
+.employee-list-container {
+  background: linear-gradient(to right, #e3f2fd, #fce4ec);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+button i {
+  margin-right: 5px;
+}

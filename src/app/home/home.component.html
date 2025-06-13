@@ -1,0 +1,16 @@
+<div class="home-container text-center d-flex flex-column justify-content-center align-items-center">
+  <h1 class="display-4 mb-4 text-primary">Welcome to Employee Management</h1>
+  <p class="lead mb-5">Manage your employee records easily and efficiently</p>
+
+  <div class="button-group">
+    <button type="button" class="btn btn-lg btn-outline-primary me-3" [routerLink]="['/employee-list']">
+      View Employee List
+    </button>
+    <button type="button" class="btn btn-lg btn-outline-success" [routerLink]="['/employee-form']">
+      Add New Employee
+    </button>
+  </div>
+  <button class="btn btn-outline-dark m-2" routerLink="/admin">
+    Admin Panel
+  </button>
+</div>

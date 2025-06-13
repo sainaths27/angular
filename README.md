@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Entity
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
@@ -57,3 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# entityproject
+>>>>>>> 4bacb4800370071427f6dafc95b3f7146e0781ce

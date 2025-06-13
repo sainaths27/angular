@@ -1,22 +1,36 @@
-<h1>Employee List</h1>
+<div class="container mt-5 employee-list-container">
+  <h1 class="text-center text-primary mb-4">Employee List</h1>
 
-<table border="1" cellpadding="5" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Salary</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let emp of employee">
-      <td>{{ emp.name }}</td>
-      <td>{{ emp.age }}</td>
-    
-      <td>
-        <button (click)="delete(emp.id!)">Delete</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle text-center shadow">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Project IDs</th>
+          <th>Role ID</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employee">
+          <td>{{ emp.id }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.projectid?.join(', ') }}</td>
+          <td>{{ emp.roleid }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="delete(emp.id!)">
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="text-center mt-3">
+    <button class="btn btn-secondary" [routerLink]="['/']">
+      <i class="bi bi-arrow-left-circle"></i> Back to Home
+    </button>
+  </div>
+</div>

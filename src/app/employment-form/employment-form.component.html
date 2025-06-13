@@ -1,1 +1,56 @@
-<p>employment-form works!</p>
+<div class="employee-form-container container mt-4 p-4 rounded shadow bg-light">
+  <h2 class="text-center text-primary mb-4">Employee Management</h2>
+
+  <!-- Create / Update Form -->
+  <form>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" class="form-control" [(ngModel)]="newEmployee.name" name="name" />
+      </div>
+      <div class="col-md-6">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" id="age" class="form-control" [(ngModel)]="newEmployee.age" name="age" />
+      </div>
+      <div class="col-md-6">
+        <label for="departid" class="form-label">Department ID</label>
+        <input type="number" id="departid" class="form-control" [(ngModel)]="newEmployee.departid" name="departid" />
+      </div>
+      <div class="col-md-6">
+        <label for="roleid" class="form-label">Role ID</label>
+        <input type="number" id="roleid" class="form-control" [(ngModel)]="newEmployee.roleid" name="roleid" />
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button type="button" class="btn btn-success me-2" (click)="addEmployee()">Submit</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="['/']">Back to Home</button>
+    </div>
+  </form>
+
+  <hr class="my-4" />
+
+  <!-- ID based Actions -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <label for="selectedId" class="form-label">Employee ID</label>
+      <input type="number" id="selectedId" class="form-control" [(ngModel)]="selectedId" name="selectedId" />
+    </div>
+    <div class="col-md-6 d-flex align-items-end">
+      <button class="btn btn-info me-2" (click)="getById()">Get By ID</button>
+      <button class="btn btn-danger" (click)="delete()">Delete</button>
+    </div>
+  </div>
+
+  <!-- Display -->
+  <div *ngIf="selectedEmployee" class="card shadow p-3 bg-white">
+    <h4 class="text-success">Selected Employee Details</h4>
+    <p><strong>ID:</strong> {{ selectedEmployee.id }}</p>
+    <p><strong>Name:</strong> {{ selectedEmployee.name }}</p>
+    <p><strong>Role ID:</strong> {{ selectedEmployee.roleid }}</p>
+  </div>
+</div>
+ <div class="text-center mt-3">
+    <button class="btn btn-secondary" [routerLink]="['/']">
+      <i class="bi bi-arrow-left-circle"></i> Back to Home
+    </button>

@@ -1,0 +1,15 @@
+.employee-form-container {
+  background: linear-gradient(to right, #f0f4c3, #e1f5fe);
+}
+
+form label {
+  font-weight: 500;
+}
+
+.btn {
+  min-width: 120px;
+}
+
+.card {
+  border-left: 5px solid #28a745;
+}
